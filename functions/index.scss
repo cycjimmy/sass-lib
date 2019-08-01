@@ -1,0 +1,21 @@
+/**
+ * strip units
+ */
+@function strip-units($number) {
+  @return $number / ($number * 0 + 1);
+}
+
+
+/**
+ * calc vw
+ * $designDrawingLength
+ * $designDrawingWidth
+ *
+ * Usage:
+ * @function calcVW($designDrawingLength:0) {
+ *   @return call(get_function("designPx2VW"), $designDrawingLength, $designDrawingWidth);
+ * }
+ */
+@function designPx2VW($designDrawingLength:0, $designDrawingWidth:750) {
+  @return strip-units($designDrawingLength) / strip-units($designDrawingWidth) * 100vw;
+}
