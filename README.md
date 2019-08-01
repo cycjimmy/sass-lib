@@ -4,13 +4,13 @@ Personal collection of sass.
 ## Install
 ```shell
 # via npm
-$ npm install @cycdpo/sass-lib --save
+$ npm install @cycjimmy/sass-lib --save
 
 # or via yarn
-$ yarn add @cycdpo/sass-lib
+$ yarn add @cycjimmy/sass-lib
 ```
 
 ## Usage
 ```scss
-@import "@cycdpo/sass-lib";
+@import "@cycjimmy/sass-lib";
 ```
