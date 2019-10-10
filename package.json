@@ -1,11 +1,11 @@
 {
   "name": "@cycjimmy/sass-lib",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Personal collection of sass.",
   "main": "index.scss",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cycdpo/sass-lib.git"
+    "url": "git+https://github.com/cycjimmy/sass-lib.git"
   },
   "keywords": [
     "collection",
@@ -14,7 +14,7 @@
   "author": "cycjimmy <cycjimmy@gmail.com> (https://github.com/cycjimmy)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cycdpo/sass-lib/issues"
+    "url": "https://github.com/cycjimmy/sass-lib/issues"
   },
-  "homepage": "https://github.com/cycdpo/sass-lib#readme"
+  "homepage": "https://github.com/cycjimmy/sass-lib#readme"
 }

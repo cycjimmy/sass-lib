@@ -1,4 +1,11 @@
+# IDE
 .idea
 .editorconfig
+
+# doc
+.github
+
+# node
 yarn.lock
+yarn-error.log
 
