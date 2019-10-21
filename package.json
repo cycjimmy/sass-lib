@@ -16,5 +16,17 @@
   "bugs": {
     "url": "https://github.com/cycjimmy/sass-lib/issues"
   },
-  "homepage": "https://github.com/cycjimmy/sass-lib#readme"
+  "homepage": "https://github.com/cycjimmy/sass-lib#readme",
+  "devDependencies": {
+    "@cycjimmy/config-lib": "^1.1.1",
+    "cz-conventional-changelog": "^3.0.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
