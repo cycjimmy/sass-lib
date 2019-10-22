@@ -1,0 +1,6 @@
+## [1.0.2](https://github.com/cycjimmy/sass-lib/compare/v1.0.1...v1.0.2) (2019-10-22)
+
+
+### Bug Fixes
+
+* **release:** update @cycjimmy/config-lib to version 1.1.3 ([6fe5702](https://github.com/cycjimmy/sass-lib/commit/6fe5702f1f2e2d7e1a6e8bfbdc7add3fb31606ca))
