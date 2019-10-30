@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/cycjimmy/sass-lib/compare/v1.0.2...v1.0.3) (2019-10-30)
+
+
+### Bug Fixes
+
+* **npm:** change npm setting ([36a1ab8](https://github.com/cycjimmy/sass-lib/commit/36a1ab849f11da66e29ce20b0ca316908945d476))
+
 ## [1.0.2](https://github.com/cycjimmy/sass-lib/compare/v1.0.1...v1.0.2) (2019-10-22)
 
 
