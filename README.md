@@ -3,7 +3,7 @@
 [![NPM version][npm-image]][npm-url]
 [![npm download][download-image]][download-url]
 [![libraries dependency status][libraries-status-image]][libraries-status-url]
-[![libraries sourcerank][libraries-sourcerank-image]][libraries-status-url]
+[![libraries sourcerank][libraries-sourcerank-image]][libraries-sourcerank-url]
 [![Release date][release-date-image]][release-url]
 [![semantic-release][semantic-image]][semantic-url]
 [![npm license][license-image]][download-url]
@@ -34,6 +34,7 @@ $ yarn add @cycjimmy/sass-lib
 [libraries-status-image]: https://img.shields.io/librariesio/release/npm/@cycjimmy/sass-lib
 [libraries-sourcerank-image]: https://img.shields.io/librariesio/sourcerank/npm/@cycjimmy/sass-lib
 [libraries-status-url]: https://libraries.io/github/cycjimmy/sass-lib
+[libraries-sourcerank-url]: https://libraries.io/npm/@cycjimmy%2Fsass-lib
 
 [release-date-image]: https://img.shields.io/github/release-date/cycjimmy/sass-lib
 [release-url]: https://github.com/cycjimmy/sass-lib/releases
