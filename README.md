@@ -1,7 +1,4 @@
 # sass-lib
-
-[![NPM version][npm-image]][npm-url]
-[![npm download][download-image]][download-url]
 [![libraries dependency status][libraries-status-image]][libraries-status-url]
 [![libraries sourcerank][libraries-sourcerank-image]][libraries-sourcerank-url]
 [![Release date][release-date-image]][release-url]
@@ -11,6 +8,9 @@
 Personal collection of sass.
 
 ## Install
+[![NPM version][npm-image]][npm-url]
+[![npm download][download-image]][download-url]
+
 ```shell
 # via npm
 $ npm install @cycjimmy/sass-lib --save
