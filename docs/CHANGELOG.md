@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/cycjimmy/sass-lib/compare/v1.0.3...v1.1.0) (2021-11-22)
+
+
+### Features
+
+* add function designPx2Px ([c968498](https://github.com/cycjimmy/sass-lib/commit/c9684986bf050329a965c00fdd41d76add6d2fe4))
+
 ## [1.0.3](https://github.com/cycjimmy/sass-lib/compare/v1.0.2...v1.0.3) (2019-10-30)
 
 
