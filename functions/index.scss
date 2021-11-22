@@ -7,7 +7,7 @@
 
 
 /**
- * calc vw
+ * designPx2VW
  * $designDrawingLength
  * $designDrawingWidth
  *
@@ -18,4 +18,25 @@
  */
 @function designPx2VW($designDrawingLength:0, $designDrawingWidth:750) {
   @return strip-units($designDrawingLength) / strip-units($designDrawingWidth) * 100vw;
+}
+
+/**
+ * designPx2Px
+ * $designDrawingLength
+ * $designDrawingWidth
+ *
+ * Usage:
+ * @function calcPX($designDrawingLength:0) {
+ *   @return call(
+ *     get_function("designPx2Px"),
+ *     $designDrawingLength,
+ *     $designDrawingWidth,
+ *     $pcRootWidth,
+ *   );
+ * }
+ */
+@function designPx2Px($designDrawingLength:0, $designDrawingWidth:750, $pcRootWidth:500) {
+  @return round(strip-units($designDrawingLength)
+  / strip-units($designDrawingWidth)
+  * strip-units($pcRootWidth)) * 1px;
 }

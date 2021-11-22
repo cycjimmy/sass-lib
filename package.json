@@ -27,6 +27,6 @@
     "access": "public"
   },
   "devDependencies": {
-    "@cycjimmy/config-lib": "^1.4.0"
+    "@cycjimmy/config-lib": "^2.0.0"
   }
 }
