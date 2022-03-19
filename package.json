@@ -2,6 +2,7 @@
   "name": "@cycjimmy/sass-lib",
   "version": "1.1.0",
   "description": "Personal collection of sass.",
+  "type": "module",
   "main": "index.scss",
   "repository": {
     "type": "git",
@@ -27,6 +28,6 @@
     "access": "public"
   },
   "devDependencies": {
-    "@cycjimmy/config-lib": "^2.0.0"
+    "@cycjimmy/config-lib": "^3.0.5"
   }
 }
