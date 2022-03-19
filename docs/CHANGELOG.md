@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/cycjimmy/sass-lib/compare/v1.1.0...v2.0.0) (2022-03-19)
+
+
+### Features
+
+* change to module mode ([6546a7b](https://github.com/cycjimmy/sass-lib/commit/6546a7be83efbd224b934cb16dc3cbab9f99bc6d))
+
+
+### BREAKING CHANGES
+
+* change to module mode
+
 # [1.1.0](https://github.com/cycjimmy/sass-lib/compare/v1.0.3...v1.1.0) (2021-11-22)
 
 
