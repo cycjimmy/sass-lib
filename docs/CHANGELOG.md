@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/cycjimmy/sass-lib/compare/v2.0.0...v2.1.0) (2022-03-26)
+
+
+### Features
+
+* refactoring build tasks ([cfb46bd](https://github.com/cycjimmy/sass-lib/commit/cfb46bd4b88d0c64585d4cf009a2d38b2059e86f))
+
 # [2.0.0](https://github.com/cycjimmy/sass-lib/compare/v1.1.0...v2.0.0) (2022-03-19)
 
 
