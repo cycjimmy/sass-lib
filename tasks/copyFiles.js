@@ -6,8 +6,24 @@ import fs from 'fs-extra';
 const { copySync } = fs;
 
 copySync(
-  path.resolve('lib'),
-  path.resolve('.release', 'lib'),
+  path.resolve('index.scss'),
+  path.resolve('.release', 'index.scss'),
+);
+copySync(
+  path.resolve('functions'),
+  path.resolve('.release', 'functions'),
+);
+copySync(
+  path.resolve('mixins'),
+  path.resolve('.release', 'mixins'),
+);
+copySync(
+  path.resolve('placeholders'),
+  path.resolve('.release', 'placeholders'),
+);
+copySync(
+  path.resolve('reset'),
+  path.resolve('.release', 'reset'),
 );
 copySync(
   path.resolve('README.md'),

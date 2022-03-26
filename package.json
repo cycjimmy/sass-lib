@@ -3,7 +3,7 @@
   "version": "2.1.0",
   "description": "Personal collection of sass.",
   "type": "module",
-  "main": "lib/index.scss",
+  "main": "index.scss",
   "scripts": {
     "lint": "eslint --ext .js,.cjs,.mjs -c .eslintrc .",
     "lint:fix": "eslint --ext .js,.cjs,.mjs --fix -c .eslintrc . --fix",
