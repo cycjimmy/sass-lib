@@ -1,3 +1,10 @@
+## [2.1.1](https://github.com/cycjimmy/sass-lib/compare/v2.1.0...v2.1.1) (2022-03-26)
+
+
+### Bug Fixes
+
+* modify style path ([d58c45c](https://github.com/cycjimmy/sass-lib/commit/d58c45c77873b92f0357c540b3c1b260dd6d64c4))
+
 # [2.1.0](https://github.com/cycjimmy/sass-lib/compare/v2.0.0...v2.1.0) (2022-03-26)
 
 
