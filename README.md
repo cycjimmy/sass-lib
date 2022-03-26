@@ -1,4 +1,6 @@
 # sass-lib
+
+![][workflows-badge-image]
 [![libraries dependency status][libraries-status-image]][libraries-status-url]
 [![libraries sourcerank][libraries-sourcerank-image]][libraries-sourcerank-url]
 [![Release date][release-date-image]][release-url]
@@ -30,6 +32,8 @@ $ yarn add @cycjimmy/sass-lib
 
 [download-image]: https://img.shields.io/npm/dt/@cycjimmy/sass-lib
 [download-url]: https://npmjs.org/package/@cycjimmy/sass-lib
+
+[workflows-badge-image]: https://github.com/cycjimmy/sass-lib/workflows/Test%20CI/badge.svg
 
 [libraries-status-image]: https://img.shields.io/librariesio/release/npm/@cycjimmy/sass-lib
 [libraries-sourcerank-image]: https://img.shields.io/librariesio/sourcerank/npm/@cycjimmy/sass-lib

@@ -3,7 +3,12 @@
   "version": "2.0.0",
   "description": "Personal collection of sass.",
   "type": "module",
-  "main": "index.scss",
+  "main": "lib/index.scss",
+  "scripts": {
+    "lint": "eslint --ext .js,.cjs,.mjs -c .eslintrc .",
+    "lint:fix": "eslint --ext .js,.cjs,.mjs --fix -c .eslintrc . --fix",
+    "package": "trash .release && npm run lint:fix && node tasks/copyFiles.js && node tasks/handlePackageJson.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cycjimmy/sass-lib.git"
@@ -18,16 +23,15 @@
     "url": "https://github.com/cycjimmy/sass-lib/issues"
   },
   "homepage": "https://github.com/cycjimmy/sass-lib#readme",
-  "files": [
-    "/functions",
-    "/mixins",
-    "/placeholders",
-    "/reset"
-  ],
   "publishConfig": {
     "access": "public"
   },
   "devDependencies": {
-    "@cycjimmy/config-lib": "^3.0.5"
+    "@cycjimmy/config-lib": "^3.2.0",
+    "eslint": "^8.11.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4",
+    "fs-extra": "^10.0.1",
+    "trash-cli": "^5.0.0"
   }
 }

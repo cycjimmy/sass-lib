@@ -1,3 +1,4 @@
-const makeCommonConfig = require('@cycjimmy/config-lib/cjs/semanticRelease/15.x/makeCommonConfig.cjs').default;
+/* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
+const makeCommon = require('@cycjimmy/config-lib/cjs/semanticRelease/19.x/makeConfigWithPgkRootForLibrary.cjs').default;
 
-module.exports = makeCommonConfig();
+module.exports = makeCommon();
