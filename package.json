@@ -27,7 +27,7 @@
     "access": "public"
   },
   "devDependencies": {
-    "@cycjimmy/config-lib": "^3.2.0",
+    "@cycjimmy/config-lib": "^3.2.1",
     "eslint": "^8.11.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.25.4",
