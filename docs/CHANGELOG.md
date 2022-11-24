@@ -1,3 +1,10 @@
+# [2.2.0](https://github.com/cycjimmy/sass-lib/compare/v2.1.1...v2.2.0) (2022-11-24)
+
+
+### Features
+
+* add text-size-adjust in wechat ([405ad45](https://github.com/cycjimmy/sass-lib/commit/405ad45eaecf8a1ee0fcfcb9613959a32f7d9fb6))
+
 ## [2.1.1](https://github.com/cycjimmy/sass-lib/compare/v2.1.0...v2.1.1) (2022-03-26)
 
 
