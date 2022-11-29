@@ -31,7 +31,7 @@
     "eslint": "^8.11.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.25.4",
-    "fs-extra": "^10.0.1",
+    "fs-extra": "^11.0.0",
     "trash-cli": "^5.0.0"
   }
 }
