@@ -1,3 +1,10 @@
+## [2.2.1](https://github.com/cycjimmy/sass-lib/compare/v2.2.0...v2.2.1) (2023-10-20)
+
+
+### Bug Fixes
+
+* fix input default cursor ([568c82e](https://github.com/cycjimmy/sass-lib/commit/568c82e78ea361d2c03edd9b52d462f4974c710f))
+
 # [2.2.0](https://github.com/cycjimmy/sass-lib/compare/v2.1.1...v2.2.0) (2022-11-24)
 
 
