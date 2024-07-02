@@ -1,3 +1,10 @@
+## [2.2.2](https://github.com/cycjimmy/sass-lib/compare/v2.2.1...v2.2.2) (2024-07-02)
+
+
+### Bug Fixes
+
+* upgrade deps ([4608511](https://github.com/cycjimmy/sass-lib/commit/4608511481c25bf0fc9e362fb00ddd4716a26f4b))
+
 ## [2.2.1](https://github.com/cycjimmy/sass-lib/compare/v2.2.0...v2.2.1) (2023-10-20)
 
 
