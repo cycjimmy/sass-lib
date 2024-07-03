@@ -1,3 +1,10 @@
+# [2.3.0](https://github.com/cycjimmy/sass-lib/compare/v2.2.2...v2.3.0) (2024-07-03)
+
+
+### Features
+
+* add placeholder hidden-scrollbar ([d16b9ac](https://github.com/cycjimmy/sass-lib/commit/d16b9ac417fe0064c559157b6aa67029c4ca9164))
+
 ## [2.2.2](https://github.com/cycjimmy/sass-lib/compare/v2.2.1...v2.2.2) (2024-07-02)
 
 

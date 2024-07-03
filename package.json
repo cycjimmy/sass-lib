@@ -1,6 +1,6 @@
 {
   "name": "@cycjimmy/sass-lib",
-  "version": "2.2.2",
+  "version": "2.3.0",
   "description": "Personal collection of sass.",
   "type": "module",
   "main": "index.scss",
