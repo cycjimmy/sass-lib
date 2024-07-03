@@ -1,0 +1,22 @@
+%_hidden-scrollbar {
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+%hidden-scrollbar-x {
+  @extend %_hidden-scrollbar;
+  overflow-x: auto;
+}
+
+%hidden-scrollbar-y {
+  @extend %_hidden-scrollbar;
+  overflow-y: auto;
+}
+
+%hidden-scrollbar {
+  @extend %_hidden-scrollbar;
+  overflow: auto;
+}
