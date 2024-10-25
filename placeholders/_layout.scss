@@ -1,5 +1,5 @@
-@import '../mixins/index';
-@import 'position';
+@use '../mixins/index' as mixins;
+@use 'position' as *;
 
 // full-container
 %full-container {
@@ -13,7 +13,7 @@
 // flex-center
 %flex-center {
   display: flex;
-  @include flex-box-align(center, center);
+  @include mixins.flex-box-align(center, center);
 }
 
 // clear-fix
