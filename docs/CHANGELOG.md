@@ -1,3 +1,15 @@
+# [3.0.0](https://github.com/cycjimmy/sass-lib/compare/v2.3.0...v3.0.0) (2024-10-25)
+
+
+### Features
+
+* remove the import method and standardize naming conventions ([13ed200](https://github.com/cycjimmy/sass-lib/commit/13ed2005cd4ac61911a3f2aaeb2313c02cceb444))
+
+
+### BREAKING CHANGES
+
+* Remove the import method and standardize naming conventions
+
 # [2.3.0](https://github.com/cycjimmy/sass-lib/compare/v2.2.2...v2.3.0) (2024-07-03)
 
 
