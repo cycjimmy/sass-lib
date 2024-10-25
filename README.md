@@ -23,7 +23,7 @@ $ yarn add @cycjimmy/sass-lib
 
 ## Usage
 ```scss
-@import "~@cycjimmy/sass-lib";
+@use '~@cycjimmy/sass-lib' as sass-lib;
 ```
 
 <!-- Links: -->

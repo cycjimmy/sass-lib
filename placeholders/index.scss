@@ -1,10 +1,10 @@
-@import "position";
-@import "layout";
-@import "text-overflow";
-@import "hidden-scrollbar";
+@forward 'position';
+@forward 'layout';
+@forward 'text-overflow';
+@forward 'hidden-scrollbar';
 
-// gpu-speedUp
-%gpu-speedUp {
+// gpu-speed-up
+%gpu-speed-up {
   backface-visibility: hidden;
   perspective: 0;
   transform: translate3d(0, 0, 0);

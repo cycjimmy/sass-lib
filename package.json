@@ -7,7 +7,9 @@
   "scripts": {
     "lint": "eslint --ext .js,.cjs,.mjs -c .eslintrc .",
     "lint:fix": "eslint --ext .js,.cjs,.mjs --fix -c .eslintrc . --fix",
-    "package": "trash .release && npm run lint:fix && node tasks/copyFiles.js && node tasks/handlePackageJson.js"
+    "stylelint": "stylelint **/*.scss",
+    "stylelint:fix": "stylelint **/*.scss --fix",
+    "package": "trash .release && npm run lint:fix && npm run stylelint:fix && node tasks/copyFiles.js && node tasks/handlePackageJson.js"
   },
   "repository": {
     "type": "git",
@@ -32,6 +34,8 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.31.0",
     "fs-extra": "^11.2.0",
+    "stylelint": "^16.10.0",
+    "stylelint-config-sass-guidelines": "^12.1.0",
     "trash-cli": "^6.0.0"
   }
 }

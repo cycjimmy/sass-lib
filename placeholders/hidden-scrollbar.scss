@@ -1,4 +1,4 @@
-%_hidden-scrollbar {
+%common-hidden-scrollbar {
   scrollbar-width: none;
 
   &::-webkit-scrollbar {
@@ -7,16 +7,16 @@
 }
 
 %hidden-scrollbar-x {
-  @extend %_hidden-scrollbar;
+  @extend %common-hidden-scrollbar;
   overflow-x: auto;
 }
 
 %hidden-scrollbar-y {
-  @extend %_hidden-scrollbar;
+  @extend %common-hidden-scrollbar;
   overflow-y: auto;
 }
 
 %hidden-scrollbar {
-  @extend %_hidden-scrollbar;
+  @extend %common-hidden-scrollbar;
   overflow: auto;
 }

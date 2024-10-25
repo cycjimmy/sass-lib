@@ -1,8 +1,8 @@
-@import "../mixins/index";
-@import "position";
+@import '../mixins/index';
+@import 'position';
 
-// fullContainer
-%fullContainer {
+// full-container
+%full-container {
   @extend %abs;
   left: 0;
   top: 0;
@@ -10,17 +10,17 @@
   height: 100%;
 }
 
-// flexCenter
-%flexCenter {
+// flex-center
+%flex-center {
   display: flex;
   @include flex-box-align(center, center);
 }
 
-// clearFix
-%clearFix {
+// clear-fix
+%clear-fix {
   &::before,
   &::after {
-    content: " ";
+    content: ' ';
     display: table;
   }
 

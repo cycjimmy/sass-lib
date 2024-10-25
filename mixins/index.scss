@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 /**
  * Fix Align Center
  * $offset
@@ -7,7 +9,14 @@
  * $bottom
  * $left
  */
-@mixin fix-center($offset: -100%, $overwrite: false, $top: false, $right: false, $bottom: false, $left: false) {
+@mixin fix-center(
+  $offset: -100%,
+  $overwrite: false,
+  $top: false,
+  $right: false,
+  $bottom: false,
+  $left: false
+) {
   position: absolute;
   margin: auto;
   @if ($overwrite == false) {
@@ -56,8 +65,8 @@
 }
 
 @mixin square-wrap-vw($vw) {
-  $max: round($vw*16 /9 *100)/100;
-  $min: round($vw*3 /2 *100)/100;
+  $max: math.round($vw * 16 /9 * 100)/100;
+  $min: math.round($vw * 3 /2 * 100)/100;
 
   width: $vw + vw;
   height: $vw + vw;
