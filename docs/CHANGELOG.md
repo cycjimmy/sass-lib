@@ -1,3 +1,10 @@
+## [3.0.1](https://github.com/cycjimmy/sass-lib/compare/v3.0.0...v3.0.1) (2024-10-25)
+
+
+### Bug Fixes
+
+* fix syntax error ([32d3aa4](https://github.com/cycjimmy/sass-lib/commit/32d3aa4635c8aed84f41936d0f9b8762bae4ba9a))
+
 # [3.0.0](https://github.com/cycjimmy/sass-lib/compare/v2.3.0...v3.0.0) (2024-10-25)
 
 
