@@ -36,6 +36,6 @@
     "fs-extra": "^11.2.0",
     "stylelint": "^16.10.0",
     "stylelint-config-sass-guidelines": "^12.1.0",
-    "trash-cli": "^6.0.0"
+    "trash-cli": "^7.0.0"
   }
 }
