@@ -1,10 +1,23 @@
 {
   "name": "@cycjimmy/sass-lib",
+  "type": "module",
   "version": "3.0.1",
   "description": "Personal collection of sass.",
-  "type": "module",
-  "main": "index.scss",
   "sass": "index.scss",
+  "author": "cycjimmy <cycjimmy@gmail.com> (https://github.com/cycjimmy)",
+  "license": "MIT",
+  "homepage": "https://github.com/cycjimmy/sass-lib#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cycjimmy/sass-lib.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cycjimmy/sass-lib/issues"
+  },
+  "keywords": [
+    "collection",
+    "sass"
+  ],
   "exports": {
     ".": {
       "sass": "./index.scss",
@@ -12,6 +25,7 @@
     },
     "./*": "./*"
   },
+  "main": "index.scss",
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
@@ -19,20 +33,6 @@
     "stylelint:fix": "stylelint **/*.scss --fix",
     "package": "trash .release && npm run lint:fix && npm run stylelint:fix && node tasks/copyFiles.js && node tasks/handlePackageJson.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cycjimmy/sass-lib.git"
-  },
-  "keywords": [
-    "collection",
-    "sass"
-  ],
-  "author": "cycjimmy <cycjimmy@gmail.com> (https://github.com/cycjimmy)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/cycjimmy/sass-lib/issues"
-  },
-  "homepage": "https://github.com/cycjimmy/sass-lib#readme",
   "publishConfig": {
     "access": "public"
   },

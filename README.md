@@ -1,6 +1,6 @@
 # sass-lib
 
-![][workflows-badge-image]
+![Test CI workflow status][workflows-badge-image]
 [![libraries dependency status][libraries-status-image]][libraries-status-url]
 [![libraries sourcerank][libraries-sourcerank-image]][libraries-sourcerank-url]
 [![Release date][release-date-image]][release-url]
