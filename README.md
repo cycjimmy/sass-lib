@@ -21,9 +21,28 @@ $ npm install @cycjimmy/sass-lib --save
 $ yarn add @cycjimmy/sass-lib
 ```
 
+## Requirements
+
+- Dart Sass >= 1.80.0 (module system only, `@import` is not supported)
+
 ## Usage
+
 ```scss
-@use '~@cycjimmy/sass-lib' as sass-lib;
+// Dart Sass node package importer, Vite, etc.
+@use '@cycjimmy/sass-lib' as *;
+
+// webpack sass-loader
+@use '~@cycjimmy/sass-lib' as *;
+```
+
+Entry points:
+
+```scss
+@use '@cycjimmy/sass-lib/functions/index' as fn;
+@use '@cycjimmy/sass-lib/mixins/index' as mx;
+@use '@cycjimmy/sass-lib/placeholders/index' as *;
+@use '@cycjimmy/sass-lib/reset/h5';
+@use '@cycjimmy/sass-lib/reset/special';
 ```
 
 <!-- Links: -->
