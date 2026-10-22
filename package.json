@@ -4,9 +4,17 @@
   "description": "Personal collection of sass.",
   "type": "module",
   "main": "index.scss",
+  "sass": "index.scss",
+  "exports": {
+    ".": {
+      "sass": "./index.scss",
+      "default": "./index.scss"
+    },
+    "./*": "./*"
+  },
   "scripts": {
-    "lint": "eslint --ext .js,.cjs,.mjs -c .eslintrc .",
-    "lint:fix": "eslint --ext .js,.cjs,.mjs --fix -c .eslintrc . --fix",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
     "stylelint": "stylelint **/*.scss",
     "stylelint:fix": "stylelint **/*.scss --fix",
     "package": "trash .release && npm run lint:fix && npm run stylelint:fix && node tasks/copyFiles.js && node tasks/handlePackageJson.js"
@@ -29,13 +37,13 @@
     "access": "public"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^9.5.1",
     "@cycjimmy/config-lib": "^3.2.2",
-    "eslint": "^8.57.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.31.0",
-    "fs-extra": "^11.2.0",
-    "stylelint": "^16.10.0",
-    "stylelint-config-sass-guidelines": "^12.1.0",
-    "trash-cli": "^6.0.0"
+    "eslint": "^10.13.0",
+    "fs-extra": "^11.4.1",
+    "sass": "^1.106.0",
+    "stylelint": "^17.16.0",
+    "stylelint-config-sass-guidelines": "^13.0.0",
+    "trash-cli": "^7.2.0"
   }
 }
