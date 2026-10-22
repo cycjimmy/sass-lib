@@ -28,14 +28,18 @@ $ yarn add @cycjimmy/sass-lib
 ## Usage
 
 ```scss
-// Dart Sass node package importer, Vite, etc.
+// Native Dart Sass (enable the node package importer first:
+// `sass --pkg-importer=node` or `importers: [new sass.NodePackageImporter()]`)
+@use 'pkg:@cycjimmy/sass-lib' as *;
+
+// Vite and other bundlers that resolve bare specifiers
 @use '@cycjimmy/sass-lib' as *;
 
 // webpack sass-loader
 @use '~@cycjimmy/sass-lib' as *;
 ```
 
-Entry points:
+Entry points (prefix with `pkg:` for the native Dart Sass importer):
 
 ```scss
 @use '@cycjimmy/sass-lib/functions/index' as fn;
