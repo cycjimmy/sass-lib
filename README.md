@@ -1,6 +1,6 @@
 # sass-lib
 
-![][workflows-badge-image]
+![Test CI workflow status][workflows-badge-image]
 [![libraries dependency status][libraries-status-image]][libraries-status-url]
 [![libraries sourcerank][libraries-sourcerank-image]][libraries-sourcerank-url]
 [![Release date][release-date-image]][release-url]
@@ -21,9 +21,32 @@ $ npm install @cycjimmy/sass-lib --save
 $ yarn add @cycjimmy/sass-lib
 ```
 
+## Requirements
+
+- Dart Sass >= 1.80.0 (module system only, `@import` is not supported)
+
 ## Usage
+
 ```scss
-@use '~@cycjimmy/sass-lib' as sass-lib;
+// Native Dart Sass (enable the node package importer first:
+// `sass --pkg-importer=node` or `importers: [new sass.NodePackageImporter()]`)
+@use 'pkg:@cycjimmy/sass-lib' as *;
+
+// Vite and other bundlers that resolve bare specifiers
+@use '@cycjimmy/sass-lib' as *;
+
+// webpack sass-loader
+@use '~@cycjimmy/sass-lib' as *;
+```
+
+Entry points (prefix with `pkg:` for the native Dart Sass importer):
+
+```scss
+@use '@cycjimmy/sass-lib/functions/index' as fn;
+@use '@cycjimmy/sass-lib/mixins/index' as mx;
+@use '@cycjimmy/sass-lib/placeholders/index' as *;
+@use '@cycjimmy/sass-lib/reset/h5';
+@use '@cycjimmy/sass-lib/reset/special';
 ```
 
 <!-- Links: -->

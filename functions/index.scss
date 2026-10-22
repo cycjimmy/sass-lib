@@ -4,7 +4,7 @@
  * strip units
  */
 @function strip-units($number) {
-  @return $number / ($number * 0 + 1);
+  @return math.div($number, $number * 0 + 1);
 }
 
 
@@ -14,31 +14,28 @@
  * $designDrawingWidth
  *
  * Usage:
- * @function calc-vw($designDrawingLength:0) {
- *   @return call(get_function("design-px2vw"), $designDrawingLength, $designDrawingWidth);
+ * .selector {
+ *   width: design-px2vw(750);
  * }
  */
-@function design-px2vw($designDrawingLength:0, $designDrawingWidth:750) {
-  @return strip-units($designDrawingLength) / strip-units($designDrawingWidth) * 100vw;
+@function design-px2vw($designDrawingLength: 0, $designDrawingWidth: 750) {
+  @return math.div(strip-units($designDrawingLength), strip-units($designDrawingWidth)) * 100vw;
 }
 
 /**
  * design-px2px
  * $designDrawingLength
  * $designDrawingWidth
+ * $pcRootWidth
  *
  * Usage:
- * @function calc-px($designDrawingLength:0) {
- *   @return call(
- *     get_function("design-px2px"),
- *     $designDrawingLength,
- *     $designDrawingWidth,
- *     $pcRootWidth,
- *   );
+ * .selector {
+ *   width: design-px2px(750, 750, 500);
  * }
  */
-@function design-px2px($designDrawingLength:0, $designDrawingWidth:750, $pcRootWidth:500) {
-  @return math.round(strip-units($designDrawingLength)
-  / strip-units($designDrawingWidth)
-  * strip-units($pcRootWidth)) * 1px;
+@function design-px2px($designDrawingLength: 0, $designDrawingWidth: 750, $pcRootWidth: 500) {
+  @return math.round(
+    math.div(strip-units($designDrawingLength), strip-units($designDrawingWidth))
+    * strip-units($pcRootWidth)
+  ) * 1px;
 }
