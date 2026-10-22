@@ -1,0 +1,29 @@
+// Compilation smoke test: every public API must compile without deprecation warnings.
+@use '../index' as *;
+
+.test-function {
+  width: design-px2vw(100);
+  height: design-px2px(100, 750, 500);
+  z-index: strip-units(10px);
+}
+
+.test-mixin {
+  @include fix-center;
+  @include flex-box-align(center, center);
+  @include square-wrap(50%);
+  @include square-wrap-vw(100);
+  @include bg-image-full(url('a.png'));
+}
+
+.test-placeholder {
+  @extend %abs;
+  @extend %rel;
+  @extend %full-container;
+  @extend %flex-center;
+  @extend %clear-fix;
+  @extend %single-line-text-overflow;
+  @extend %hidden-scrollbar;
+  @extend %hidden-scrollbar-x;
+  @extend %hidden-scrollbar-y;
+  @extend %gpu-speed-up;
+}

@@ -31,6 +31,7 @@
     "lint:fix": "eslint --fix .",
     "stylelint": "stylelint **/*.scss",
     "stylelint:fix": "stylelint **/*.scss --fix",
+    "test": "sass --no-source-map --fatal-deprecation=1.80.0 test/index.scss",
     "package": "trash .release && npm run lint:fix && npm run stylelint:fix && node tasks/copyFiles.js && node tasks/handlePackageJson.js"
   },
   "publishConfig": {
