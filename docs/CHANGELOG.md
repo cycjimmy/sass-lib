@@ -1,3 +1,16 @@
+# [4.0.0](https://github.com/cycjimmy/sass-lib/compare/v3.0.1...v4.0.0) (2026-10-22)
+
+
+* refactor(sass)!: remove deprecated syntax and require Dart Sass 1.80+ ([7f3136e](https://github.com/cycjimmy/sass-lib/commit/7f3136e3a062fe5d8cccd3f20d657927f180db89))
+
+
+### BREAKING CHANGES
+
+* the library now targets the Sass module system only and
+requires Dart Sass >= 1.80.0. Consumers must load it with @use/@forward;
+the legacy @import entry point and pre-1.80 Sass versions are no longer
+supported.
+
 ## [3.0.1](https://github.com/cycjimmy/sass-lib/compare/v3.0.0...v3.0.1) (2024-10-25)
 
 

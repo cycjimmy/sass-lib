@@ -1,7 +1,7 @@
 {
   "name": "@cycjimmy/sass-lib",
   "type": "module",
-  "version": "3.0.1",
+  "version": "4.0.0",
   "description": "Personal collection of sass.",
   "sass": "index.scss",
   "author": "cycjimmy <cycjimmy@gmail.com> (https://github.com/cycjimmy)",
