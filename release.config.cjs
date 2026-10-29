@@ -8,7 +8,10 @@ const config = makeConfig()
 if (process.env.SKIP_NPM_AUTH === 'true') {
   config.plugins = config.plugins.map((plugin) => {
     if (Array.isArray(plugin) && plugin[0] === '@semantic-release/npm' && plugin[1] && plugin[1].pkgRoot) {
-      return [plugin[0], { ...plugin[1], npmPublish: false }]
+      return [
+        plugin[0],
+        { ...plugin[1], npmPublish: false },
+      ]
     }
 
     return plugin
