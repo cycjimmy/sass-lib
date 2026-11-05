@@ -49,6 +49,10 @@ Entry points (prefix with `pkg:` for the native Dart Sass importer):
 @use '@cycjimmy/sass-lib/reset/special';
 ```
 
+## Development
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the local toolchain, repository settings and bot configuration.
+
 <!-- Links: -->
 [npm-image]: https://img.shields.io/npm/v/@cycjimmy/sass-lib
 [npm-url]: https://npmjs.org/package/@cycjimmy/sass-lib

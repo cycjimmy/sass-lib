@@ -20,8 +20,15 @@ if (jsonData.devDependencies) {
   delete jsonData.devDependencies
 }
 
-if (jsonData.publishConfig) {
-  delete jsonData.publishConfig
+if (jsonData.engines) {
+  delete jsonData.engines
+}
+
+// A scoped package without `publishConfig.access` is published as `restricted`.
+// Keep only the access level: the registry and tag are decided by the release
+// tooling, not by the source package.json.
+jsonData.publishConfig = {
+  access: jsonData.publishConfig?.access ?? 'public',
 }
 
 if (jsonData.config) {

@@ -35,7 +35,6 @@
  */
 @function design-px2px($designDrawingLength: 0, $designDrawingWidth: 750, $pcRootWidth: 500) {
   @return math.round(
-    math.div(strip-units($designDrawingLength), strip-units($designDrawingWidth))
-    * strip-units($pcRootWidth)
+    math.div(strip-units($designDrawingLength), strip-units($designDrawingWidth)) * strip-units($pcRootWidth)
   ) * 1px;
 }

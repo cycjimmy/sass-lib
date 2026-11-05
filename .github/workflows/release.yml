@@ -9,17 +9,12 @@ on:
       - alpha
       - beta
 
-permissions:
-  id-token: write
-  contents: write
-  issues: write
-  pull-requests: write
-  packages: write
-
 jobs:
   test:
     name: test
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - name: Checkout
         uses: actions/checkout@v7
@@ -36,14 +31,20 @@ jobs:
         run: npm ci
 
       - run: npm run lint
-      - run: npm run stylelint
+      - run: npm run lint:style
       - run: npm test
-      - run: npm run package
+      - run: npm run build
 
   release:
     name: release
     runs-on: ubuntu-latest
     needs: test
+    permissions:
+      contents: write # for semantic-release to publish a GitHub release and push version branches
+      issues: write # for semantic-release to comment on released issues
+      pull-requests: write # for semantic-release to comment on released pull requests
+      id-token: write # for npm trusted publishing (OIDC) with automatic provenance
+      packages: write # for publishing to GitHub Package Registry
     steps:
       - name: Checkout
         uses: actions/checkout@v7
@@ -60,7 +61,7 @@ jobs:
         run: npm ci
 
       - name: Build package
-        run: npm run package
+        run: npm run build
 
       - name: Semantic Release
         uses: cycjimmy/semantic-release-action@v8

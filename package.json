@@ -26,16 +26,20 @@
     "./*": "./*"
   },
   "main": "index.scss",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": "^22.13.0 || >=24"
+  },
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-    "stylelint": "stylelint **/*.scss",
-    "stylelint:fix": "stylelint **/*.scss --fix",
+    "lint:style": "stylelint \"*.scss\" \"functions/**/*.scss\" \"mixins/**/*.scss\" \"placeholders/**/*.scss\" \"reset/**/*.scss\" \"test/**/*.scss\"",
+    "lint:style:fix": "stylelint \"*.scss\" \"functions/**/*.scss\" \"mixins/**/*.scss\" \"placeholders/**/*.scss\" \"reset/**/*.scss\" \"test/**/*.scss\" --fix",
     "test": "sass --no-source-map --fatal-deprecation=1.80.0 test/index.scss",
-    "package": "trash .release && npm run lint:fix && npm run stylelint:fix && node tasks/copyFiles.js && node tasks/handlePackageJson.js"
-  },
-  "publishConfig": {
-    "access": "public"
+    "build": "trash .release && node tasks/copyFiles.js && node tasks/handlePackageJson.js",
+    "package": "npm run build"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^10.0.0",
@@ -44,7 +48,8 @@
     "fs-extra": "^11.4.1",
     "sass": "^1.106.0",
     "stylelint": "^17.16.0",
-    "stylelint-config-sass-guidelines": "^13.0.0",
+    "stylelint-config-idiomatic-order": "^10.0.0",
+    "stylelint-config-standard-scss": "^17.0.0",
     "trash-cli": "^7.2.0"
   }
 }

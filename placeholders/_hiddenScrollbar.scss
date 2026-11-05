@@ -8,15 +8,18 @@
 
 %hidden-scrollbar-x {
   @extend %common-hidden-scrollbar;
+
   overflow-x: auto;
 }
 
 %hidden-scrollbar-y {
   @extend %common-hidden-scrollbar;
+
   overflow-y: auto;
 }
 
 %hidden-scrollbar {
   @extend %common-hidden-scrollbar;
+
   overflow: auto;
 }
