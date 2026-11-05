@@ -1,6 +1,16 @@
 name: Test CI
 on:
+  # Release branches only: a branch push also opens a pull request, and two runs
+  # of the same workflow on one commit produce two identically named check runs,
+  # which makes a check-name based gate see one run's result while the other is
+  # still going. Feature branches are covered by the `pull_request` trigger.
   push:
+    branches:
+      - main
+      - next
+      - next-major
+      - alpha
+      - beta
 
   pull_request:
     branches:
