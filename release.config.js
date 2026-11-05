@@ -1,9 +1,9 @@
-const process = require('node:process')
-const makeConfig = require('@cycjimmy/config-lib/cjs/semanticRelease/19.x/makeConfigWithPgkRootForLibrary.cjs').default
+import process from 'node:process'
+import makeConfig from '@cycjimmy/config-lib/esm/semanticRelease/19.x/makeConfigWithPgkRootForLibrary.js'
 
 const config = makeConfig()
 
-// Set SKIP_NPM_AUTH=true to skip npm credential verification (e.g. dry-run
+// Set SKIP_NPM_AUTH=true to skip npm credential verification (e.g., dry-run
 // jobs that never publish). See @semantic-release/npm's `npmPublish` option.
 if (process.env.SKIP_NPM_AUTH === 'true') {
   config.plugins = config.plugins.map((plugin) => {
@@ -18,4 +18,4 @@ if (process.env.SKIP_NPM_AUTH === 'true') {
   })
 }
 
-module.exports = config
+export default config

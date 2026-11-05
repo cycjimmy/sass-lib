@@ -19,22 +19,26 @@
 ) {
   position: absolute;
   margin: auto;
-  @if ($overwrite == false) {
-    left: $offset;
+
+  @if $overwrite == false {
     top: $offset;
     right: $offset;
     bottom: $offset;
+    left: $offset;
   } @else {
-    @if ($top) {
+    @if $top {
       top: $top;
     }
-    @if ($right) {
+
+    @if $right {
       right: $right;
     }
-    @if ($bottom) {
+
+    @if $bottom {
       bottom: $bottom;
     }
-    @if ($left) {
+
+    @if $left {
       left: $left;
     }
   }
@@ -47,10 +51,11 @@
  * options: false, center, flex-end, ...
  */
 @mixin flex-box-align($mainAxis:false, $crossAxis:false) {
-  @if ($mainAxis != false) {
+  @if $mainAxis != false {
     justify-content: $mainAxis;
   }
-  @if ($crossAxis != false) {
+
+  @if $crossAxis != false {
     align-items: $crossAxis;
   }
 }
@@ -59,8 +64,8 @@
  * square container
  */
 @mixin square-wrap($width:100%) {
-  height: 0;
   width: $width;
+  height: 0;
   padding-bottom: $width;
 }
 
@@ -69,9 +74,9 @@
   $min: math.div(math.round(math.div($vw * 3, 2) * 100), 100);
 
   width: $vw + vw;
-  height: $vw + vw;
   min-width: $min + vh;
   max-width: $max + vh;
+  height: $vw + vw;
   min-height: $min + vh;
   max-height: $max + vh;
 }

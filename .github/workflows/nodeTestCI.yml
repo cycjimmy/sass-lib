@@ -13,23 +13,25 @@ on:
   schedule:
     - cron: 0 2 * * 0
 
-permissions:
-  contents: write
-
 jobs:
   test:
     runs-on: ${{ matrix.os }}
+    # Read-only on purpose: `npm ci` runs install scripts from the dependency tree.
+    permissions:
+      contents: read
     strategy:
       fail-fast: false
       matrix:
-        node: [24]
+        node: [22, 24]
         os: [ubuntu-latest, windows-latest, macOS-latest]
 
     steps:
       - name: Checkout
         uses: actions/checkout@v7
         with:
-          fetch-depth: 0
+          # No git credential is needed after the clone, and keeping one would
+          # hand it to whatever `npm ci` install scripts decide to run.
+          persist-credentials: false
 
       - name: Setup Node.js
         uses: actions/setup-node@v7
@@ -44,13 +46,52 @@ jobs:
         run: npm run lint
 
       - name: Lint SCSS
-        run: npm run stylelint
+        run: npm run lint:style
 
-      - name: Run tests
+      - name: Run unit tests
         run: npm test
 
       - name: Build package
-        run: npm run package
+        run: npm run build
+
+  # Split out of `test` so the dry-run executes once instead of per matrix cell.
+  #
+  # This job loads release.config.js, runs `npm ci` and builds the package from
+  # the checked out commit. On a pull request that commit is authored by the PR
+  # itself, so a write token must never reach it: only trusted refs qualify. The
+  # pull request path keeps its packaging check in the read-only `test` matrix.
+  release-dry-run:
+    needs: test
+    if: >-
+      github.event_name == 'schedule' ||
+      (github.event_name == 'push' &&
+      contains(fromJSON('["refs/heads/main", "refs/heads/next", "refs/heads/next-major", "refs/heads/alpha", "refs/heads/beta"]'), github.ref))
+    runs-on: ubuntu-latest
+    # SKIP_NPM_AUTH disables npm publishing, so verifyAuth never exchanges an
+    # OIDC token here; only the `git push --dry-run` access check needs a scope.
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+
+      # release.config.js imports @cycjimmy/config-lib and @semantic-release/npm
+      # reads pkgRoot (.release), so this job rebuilds instead of inheriting the
+      # test job's filesystem.
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build package
+        run: npm run build
 
       - name: Semantic Release Test
         uses: cycjimmy/semantic-release-action@v8
@@ -78,3 +119,16 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SKIP_NPM_AUTH: 'true'
+
+  # GitHub reports one check per matrix cell, so branch protection cannot point
+  # at a stable name. This gate is the single check to require.
+  test-status:
+    name: Test CI Summary
+    if: always()
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - if: needs.test.result != 'success'
+        run: |
+          echo "::error::The test matrix did not pass: ${{ needs.test.result }}"
+          exit 1
