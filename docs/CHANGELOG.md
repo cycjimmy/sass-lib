@@ -1,3 +1,10 @@
+## [5.0.1](https://github.com/cycjimmy/sass-lib/compare/v5.0.0...v5.0.1) (2026-11-05)
+
+
+### Bug Fixes
+
+* **ci:** stop the auto-merge gate from racing a second check suite ([7e584d7](https://github.com/cycjimmy/sass-lib/commit/7e584d7740254b4b5c0df9dbdcedab5839269be4))
+
 # [5.0.0](https://github.com/cycjimmy/sass-lib/compare/v4.0.0...v5.0.0) (2026-11-05)
 
 
