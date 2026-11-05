@@ -1,3 +1,15 @@
+# [5.0.0](https://github.com/cycjimmy/sass-lib/compare/v4.0.0...v5.0.0) (2026-11-05)
+
+
+* feat!: modernize toolchain and repository automation ([25756fa](https://github.com/cycjimmy/sass-lib/commit/25756faf87f7637f9e730d90c0fe6916f3c4025c))
+
+
+### BREAKING CHANGES
+
+* the release config is ESM-only, the stylelint scripts are
+renamed to lint:style/lint:style:fix, `npm run package` no longer runs lint
+fixes, and contributors must use Node ^22.13.0 || >=24.
+
 # [4.0.0](https://github.com/cycjimmy/sass-lib/compare/v3.0.1...v4.0.0) (2026-10-22)
 
 
