@@ -30,7 +30,7 @@
     "access": "public"
   },
   "engines": {
-    "node": "^22.13.0 || >=24"
+    "node": "^22.18.0 || >=24.11.0"
   },
   "scripts": {
     "lint": "eslint .",
@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^10.0.0",
-    "@cycjimmy/config-lib": "^3.2.2",
+    "@cycjimmy/config-lib": "^4.0.0",
     "eslint": "^10.13.0",
     "fs-extra": "^11.4.1",
     "sass": "^1.106.0",

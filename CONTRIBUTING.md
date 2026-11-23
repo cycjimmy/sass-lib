@@ -4,10 +4,10 @@ The repository is released under the MIT license, and follows a standard Github 
 
 ## Development
 
-Node `^22.13.0 || >=24` is required (see `engines.node` in `package.json`).
+Node `^22.18.0 || >=24.11.0` is required (see `engines.node` in `package.json`).
 
 ```shell
-$ npm install          # Node ^22.13.0 || >=24
+$ npm install          # Node ^22.18.0 || >=24.11.0
 $ npm run lint         # ESLint (flat config, @antfu/eslint-config)
 $ npm run lint:fix     # the same, with --fix
 $ npm run lint:style   # Stylelint for every SCSS file in the repository
